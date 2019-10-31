@@ -2,16 +2,16 @@
 class Bump < Formula
   desc "Command-line to bump version in a git repository."
   homepage "https://github.com/guilhem/bump"
-  version "0.0.4"
+  version "0.0.5"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/guilhem/bump/releases/download/v0.0.4/bump_0.0.4_Darwin_x86_64.tar.gz"
-    sha256 "863eab50c3aefe355e2839779c674f0de83ff39540e21badfbcef7a791ab01f5"
+    url "https://github.com/guilhem/bump/releases/download/v0.0.5/bump_0.0.5_Darwin_x86_64.tar.gz"
+    sha256 "3a55280c66e9d58a50e37124c26145e32a816fe8a3d847d799c5ec9a57dde27f"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/guilhem/bump/releases/download/v0.0.4/bump_0.0.4_Linux_x86_64.tar.gz"
-      sha256 "bd330a5d9ba112d77151df7c73a362f78bb1897b4d3fac84dc3242302b51e7a7"
+      url "https://github.com/guilhem/bump/releases/download/v0.0.5/bump_0.0.5_Linux_x86_64.tar.gz"
+      sha256 "026b8d160b048e29e9d64a2c509a3d67abaf39e9f3b2bbb46c374f5080a6ce1e"
     end
   end
 
