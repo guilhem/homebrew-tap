@@ -8,17 +8,17 @@ class Bump < Formula
   version "0.2.3"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/guilhem/bump/releases/download/v0.2.3/bump_Darwin_arm64.tar.gz"
-      sha256 "7ce76fb380a9df84de7392659648ef2358576fe773918f03ff7d0d2bc429e3da"
+    if Hardware::CPU.intel?
+      url "https://github.com/guilhem/bump/releases/download/v0.2.3/bump_Darwin_x86_64.tar.gz"
+      sha256 "42dc0f2ad0ab75d072575b4a9dc4115f5698b0dc8fbb899a5208cddbc6a9656b"
 
       def install
         bin.install "bump"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/guilhem/bump/releases/download/v0.2.3/bump_Darwin_x86_64.tar.gz"
-      sha256 "2fc56db55af281f76ea57584426c8e0512547554bc042f2decad7885720e0bff"
+    if Hardware::CPU.arm?
+      url "https://github.com/guilhem/bump/releases/download/v0.2.3/bump_Darwin_arm64.tar.gz"
+      sha256 "d50f0ff3e063a75f0789a6c23e19ff78468bcd04279afa7b3f0cf5fbab432ab8"
 
       def install
         bin.install "bump"
@@ -29,7 +29,7 @@ class Bump < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/guilhem/bump/releases/download/v0.2.3/bump_Linux_arm64.tar.gz"
-      sha256 "4768e3d202530c134b4a18462917302706cddfe0efa418ed4088bcd965ec7a45"
+      sha256 "fca38aec316f5689c7bc94d028b7b24d9a2fcb47da2eef476e2f21e4e124dbc3"
 
       def install
         bin.install "bump"
@@ -37,7 +37,7 @@ class Bump < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/guilhem/bump/releases/download/v0.2.3/bump_Linux_x86_64.tar.gz"
-      sha256 "7ffc7da920fe594c46abffd752f479dc1b2afdaac6cb722033f2a5764656a97e"
+      sha256 "30f3b862fb7a52183f2177c9ed8808d562d3e04c544ba9b38e97795f9d42950c"
 
       def install
         bin.install "bump"
