@@ -5,20 +5,20 @@
 class Bump < Formula
   desc "Command-line to bump version in a git repository."
   homepage "https://github.com/guilhem/bump"
-  version "0.2.1"
+  version "0.2.3"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/guilhem/bump/releases/download/v0.2.1/bump_0.2.1_Darwin_x86_64.tar.gz"
-      sha256 "1b29e76c4b0f7391a651c00cf7958ea99078cc47470c087f172d54e68b9298ca"
+    if Hardware::CPU.arm?
+      url "https://github.com/guilhem/bump/releases/download/v0.2.3/bump_Darwin_arm64.tar.gz"
+      sha256 "7ce76fb380a9df84de7392659648ef2358576fe773918f03ff7d0d2bc429e3da"
 
       def install
         bin.install "bump"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/guilhem/bump/releases/download/v0.2.1/bump_0.2.1_Darwin_arm64.tar.gz"
-      sha256 "96f6f361afb33ea8158aad4359f18b55118dbcc269417c6796db4f36878d20f1"
+    if Hardware::CPU.intel?
+      url "https://github.com/guilhem/bump/releases/download/v0.2.3/bump_Darwin_x86_64.tar.gz"
+      sha256 "2fc56db55af281f76ea57584426c8e0512547554bc042f2decad7885720e0bff"
 
       def install
         bin.install "bump"
@@ -28,16 +28,16 @@ class Bump < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/guilhem/bump/releases/download/v0.2.1/bump_0.2.1_Linux_arm64.tar.gz"
-      sha256 "e7de8bf908fe628f690d9e5e8620cf2d179efecf2f8ae4f9597a18fe13ff049a"
+      url "https://github.com/guilhem/bump/releases/download/v0.2.3/bump_Linux_arm64.tar.gz"
+      sha256 "4768e3d202530c134b4a18462917302706cddfe0efa418ed4088bcd965ec7a45"
 
       def install
         bin.install "bump"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/guilhem/bump/releases/download/v0.2.1/bump_0.2.1_Linux_x86_64.tar.gz"
-      sha256 "203d2c4b6505d3e4386c05b0557555d8bf62b7dcf0ceb8ce553a26fcba436c7f"
+      url "https://github.com/guilhem/bump/releases/download/v0.2.3/bump_Linux_x86_64.tar.gz"
+      sha256 "7ffc7da920fe594c46abffd752f479dc1b2afdaac6cb722033f2a5764656a97e"
 
       def install
         bin.install "bump"
